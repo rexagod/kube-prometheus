@@ -87,11 +87,11 @@
     {
       "source": {
         "git": {
-          "remote": "https://github.com/prometheus/prometheus",
+          "remote": "https://github.com/rexagod/prometheus",
           "subdir": "documentation/prometheus-mixin"
         }
       },
-      "version": "main",
+      "version": "multicluster-opt-out-2",
       "name": "prometheus"
     },
     {
