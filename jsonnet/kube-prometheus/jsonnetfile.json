@@ -91,7 +91,7 @@
           "subdir": "documentation/prometheus-mixin"
         }
       },
-      "version": "multicluster-opt-out-2",
+      "version": "multicluster-opt-out",
       "name": "prometheus"
     },
     {
