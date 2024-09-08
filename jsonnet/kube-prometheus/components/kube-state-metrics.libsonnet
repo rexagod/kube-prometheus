@@ -162,8 +162,8 @@ function(params) (import 'github.com/kubernetes/kube-state-metrics/jsonnet/kube-
           automountServiceAccountToken: true,
           containers: std.map(function(c) c {
             ports:: null,
-            livenessProbe:: null,
-            readinessProbe:: null,
+            livenessProbe: if ksm._config.upstreamProbesOptIn then super.livenessProbe else null,
+            readinessProbe: if ksm._config.upstreamProbesOptIn then super.readinessProbe else null,
             securityContext+: {
               runAsGroup: 65534,
             },

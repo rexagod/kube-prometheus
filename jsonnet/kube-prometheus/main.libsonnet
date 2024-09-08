@@ -83,6 +83,7 @@ local utils = import './lib/utils.libsonnet';
       image: $.values.common.images.kubeStateMetrics,
       mixin+: { ruleLabels: $.values.common.ruleLabels },
       kubeRbacProxyImage: $.values.common.images.kubeRbacProxy,
+      upstreamProbesOptIn: $.values.upstreamProbesOptIn,
     },
     nodeExporter: {
       namespace: $.values.common.namespace,
