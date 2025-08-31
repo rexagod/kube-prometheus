@@ -11,7 +11,7 @@ local addArgs(args, name, containers) =
   );
 
 {
-  ksmConfig+:: {
+  values+:: {
     ksmDenyList: [
       '^kube_.+_created$',
       '^kube_.+_metadata_resource_version$',
@@ -33,7 +33,7 @@ local addArgs(args, name, containers) =
         template+: {
           spec+: {
             containers: addArgs(
-              ['--metric-denylist=\n' + std.join(',\n', $.ksmConfig.ksmDenyList) + '\n'],
+              ['--metric-denylist=\n' + std.join(',\n', $.values.ksmDenyList) + '\n'],
               'kube-state-metrics',
               super.containers
             ),
